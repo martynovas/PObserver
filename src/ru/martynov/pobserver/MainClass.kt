@@ -22,8 +22,8 @@ fun main(){
     bread.changeCount(40)
 
     ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,fedor)
-    ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,alex)
-    ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,qiwi)
+   /* ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,alex)
+    ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,qiwi)*/
     rice.setDiscount(10)
 
     println("ok")
