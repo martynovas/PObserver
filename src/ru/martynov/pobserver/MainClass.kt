@@ -7,7 +7,7 @@ fun main(){
     val qiwi=Company("Qiwi")
     val alex=User("Alex")
     val fedor=User("Fedor")
-    val milk = Product("Milk",100)
+    val milk = Product("Milk",500)
     val bread = Product("Bread",30)
     val rice = Product("Rice", 50)
     ProductEventManager.subscribe(ProductEventType.CHANGE_PRICE,milk,qiwi)
