@@ -6,8 +6,10 @@ class MainClass {
 fun main(){
     val qiwi=Company("Qiwi")
     val alex=User("Alex")
+    val fedor=User("Fedor")
     val milk = Product("Milk",100)
     val bread = Product("Bread",30)
+    val rice = Product("Rice", 50)
     ProductEventManager.subscribe(ProductEventType.CHANGE_PRICE,milk,qiwi)
     ProductEventManager.subscribe(ProductEventType.CHANGE_PRICE,milk,alex)
     ProductEventManager.subscribe(ProductEventType.CHANGE_PRICE,bread,alex)
@@ -18,6 +20,11 @@ fun main(){
     bread.changeCount(20)
     bread.changeCount(0)
     bread.changeCount(40)
+
+    ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,fedor)
+   /* ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,alex)
+    ProductEventManager.subscribe(ProductEventType.BARGAIN,rice,qiwi)*/
+    rice.setDiscount(10)
 
     println("ok")
 }
