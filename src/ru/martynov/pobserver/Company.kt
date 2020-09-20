@@ -5,6 +5,7 @@ class Company(val name:String):ProductEventListener {
         when (productEvent) {
             is ProductEventChangePrice -> println("Company $name now about change price: ${productEvent.product.name}  old price ${productEvent.oldPrice} new price ${productEvent.newPrice}}")
             is ProductEventAppear -> println("Company $name now about what product ${productEvent.product.name} appear")
+            is ProductEventBargain -> println("Company $name now about what product have bargain ${productEvent.bargainDiscount} ")
         }
     }
 }
