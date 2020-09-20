@@ -13,4 +13,9 @@ object ProductEventManager {
         else
             listeners[Pair(eventType,product)] = mutableListOf(listener)
     }
+
+    fun unsubscribe(eventType:ProductEventType,product:Product,listener: ProductEventListener){
+        listeners[Pair(eventType,product)]?.remove(listener)
+    }
+
 }

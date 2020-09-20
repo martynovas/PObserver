@@ -16,6 +16,8 @@ fun main(){
     ProductEventManager.subscribe(ProductEventType.APPEAR,bread,alex)
     bread.changeCount(10)
     bread.changePrice(35)
+    ProductEventManager.unsubscribe(ProductEventType.CHANGE_PRICE,bread,alex)
+    bread.changePrice(45)
     milk.changePrice(200)
     bread.changeCount(20)
     bread.changeCount(0)
